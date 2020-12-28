@@ -63,7 +63,7 @@ I happened to need a histogram for some data so I quickly came up with
 $ ruby -aF: -ne 'puts "%9s: %5d |%s" % [$F[0], $F[1], "+"*($F[1].to_i/350)]' < datafile
 ```
 
-Afterwards I wondered if I can make it smarter (without the magic numbers). Plus I'm currently learning the [Ruby one-liners cookbook](https://github.com/learnbyexample/learn_ruby_oneliners) and wanted to see where I can push my Ruby to.
+Afterwards I wondered if I can make it smarter (without the magic numbers). Plus I'm currently learning the [Ruby one-liners cookbook](https://github.com/learnbyexample/learn_ruby_oneliners) and wanted to see where I can push my limits with Ruby to.
 
 ## Known bugs
 
