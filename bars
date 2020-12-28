@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+symbol="${symbol:-+}" width="${width:-80}" \
+ruby -0777 -laF'\n' -ne '
+lines = $F.map{|ln| ln.split(/\s+/, 2)}.map{|f| [f[0].to_i, f.fetch(1, "")]}
+labellen = lines.map{|f| f[1].size}.max
+maxfig = lines.map(&:first).max
+lines.map{|f| puts "%#{labellen}s %#{maxfig.to_s.size}d |%s" \
+ % [f[1], f[0], ENV["symbol"]*(f[0]*(ENV["width"].to_i-labellen-maxfig.to_s.size)/maxfig)]}'
