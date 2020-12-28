@@ -2,7 +2,7 @@
 
 Bars is a cli util that visualizes stdin input data as bar graphs / histograms.
 
-# Installation
+## Installation
 
 Grab the script and optionally symlink somewhere under `$PATH`.
 
@@ -10,7 +10,7 @@ Grab the script and optionally symlink somewhere under `$PATH`.
 $ git clone https://github.com/yjyao/bars.git && ln -s "$PWD/bars/bars" ~/.local/bin/bars
 ```
 
-# Usage
+## Usage
 
 Each line is an entry. Each entry has a number and optionally a label, separated by at least a white space. The output stretches across the `$width` which is by default 80.
 
@@ -18,7 +18,7 @@ Options are passed thru environment variables (which is bad, but I kinda wanted 
 - **width**: Width of the graph (80)
 - **symbol**: Symbol used to plot the bars (`+`)
 
-# Examples
+## Examples
 
 ```sh
 $ bars <<eof
@@ -55,7 +55,7 @@ Days in a month  30 |+++++
  Days in a year 365 |++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 ```
 
-# Why did you make this?
+## Why did you make this?
 
 I happened to need a histogram for some data so I quickly came up with
 
@@ -65,7 +65,7 @@ $ ruby -aF: -ne 'puts "%9s: %5d |%s" % [$F[0], $F[1], "+"*($F[1].to_i/350)]' < d
 
 Afterwards I wondered if I can make it smarter (without the magic numbers). Plus I'm currently learning the [Ruby one-liners cookbook](https://github.com/learnbyexample/learn_ruby_oneliners) and wanted to see where I can push my Ruby to.
 
-# Known bugs
+## Known bugs
 
 - Decimal numbers will be striped to integers
 
